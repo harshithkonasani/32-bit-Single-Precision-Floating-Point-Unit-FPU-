@@ -30,12 +30,7 @@ module Floating_Point_Unit #(parameter DATA_WIDTH = 32,
     wire [DATA_WIDTH - 1 : 0] result_addition_out;
     wire [DATA_WIDTH - 1 : 0] result_subtraction_out;
     wire [DATA_WIDTH - 1 : 0] result_multiplication_out;
-    wire [DATA_WIDTH - 1 : 0] result_division_out ;
-   
-    
-    demux_1x4 D3 (.in(operand1_in) , .opcode(opcode), .demux_add(demux_addition1), .demux_sub(demux_addition1), .demux_mul(demux_multiplication1), .demux_div(demux_division1));
-    
-    demux_1x4 D4 (.in(operand2_in) , .opcode(opcode), .demux_add(demux_addition2), .demux_sub(demux_addition2), .demux_mul(demux_multiplication2), .demux_div(demux_division2));    
+    wire [DATA_WIDTH - 1 : 0] result_division_out ;   
     
     //Module Instantiations
     floating_point_addition f1(.floating1_in(operand1_in), .floating2_in(operand2_in),.opcode_in(opcode[0]), .floating_addition_out(result_addition_out));
