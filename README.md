@@ -1,1 +1,7 @@
 # 32-bit-Single-Precision-Floating-Point-Unit-FPU-
+
+Floating Point Units (FPUs) are essential components in modern computing systems, enabling efficient arithmetic operations on real numbers. Unlike fixed-point arithmetic, floating-point representation provides a wider dynamic range, making it suitable for scientific computing, signal processing, and machine learning applications. The IEEE 754 standard defines the representation and behavior of floating-point arithmetic, ensuring accuracy, consistency, and exception handling in hardware implementations.
+
+This project focuses on the design, testing, and implementation of a 32-bit single-precision Floating Point Unit (FPU) in Verilog, following the IEEE 754 standard. The FPU supports fundamental arithmetic operations, including addition, subtraction, multiplication, and division, while handling special cases such as overflow, underflow, division by zero, NaN (Not-a-Number), and denormalized numbers. The design is implemented on the Zynq-7000 FPGA using Xilinx Vivado, with functional validation performed through simulation and hardware testing using Xilinx SDK.
+
+To enhance performance and meet timing constraints, the design incorporates pipelining and a stage-based architecture, which improves throughput and reduces critical path delays. By breaking down computations into multiple stages, the FPU achieves higher clock frequencies and better resource utilization, making it suitable for FPGA-based high-performance computing applications.
